@@ -12,7 +12,7 @@
     <color name="grey">#8C8C8C</color>
 
     <!-- Difficulty colors -->
-    <color name="easy_color">#804CAF50</color>
-    <color name="medium_color">#80FFC107</color>
-    <color name="hard_color">#80F44336</color>
+    <color name="easy_color">#FFC107</color>
+    <color name="medium_color">#FF5722</color>
+    <color name="hard_color">#80FF0D00</color>
 </resources>
