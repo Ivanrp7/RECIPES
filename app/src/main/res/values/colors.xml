@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#EE0000</color>
+    <!-- menu color -->
+
+    <color name="purple_500">#FF3C00</color>
+
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -15,4 +18,12 @@
     <color name="easy_color">#FFC107</color>
     <color name="medium_color">#FF5722</color>
     <color name="hard_color">#80FF0D00</color>
+    <color name="title">#FF3C00</color>
+    <color name="country">#121FE0</color>
+    <color name="ingredients">#494848</color>
+    <color name="background">#9E9C9C</color>
+
+
+
+
 </resources>

@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:text="Receta"
                     android:textAppearance="?attr/textAppearanceHeadline5"
-                    android:textColor="@color/design_default_color_primary"
+                    android:textColor="@color/title"
                     android:textStyle="bold" />
 
                 <TextView
@@ -47,7 +47,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Pais"
-                    android:textAppearance="?attr/textAppearanceBody1" />
+                    android:textColor="@color/country"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:textStyle="bold"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -76,7 +78,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="(1 Reviews)"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/title"/>
 
                 </LinearLayout>
 
@@ -99,7 +103,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Preparation:" />
+                            android:text="Preparation:"
+                            android:textColor="@color/title"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:id="@+id/prepTimeTextView"
@@ -107,7 +113,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            tools:text="15 min" />
+                            tools:text="15 min"
+                            android:textColor="@color/country"/>
 
                     </LinearLayout>
 
@@ -126,7 +133,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cooking:" />
+                            android:text="Cooking:"
+                            android:textColor="@color/title"
+                            android:textStyle="bold"/>
 
 
                         <TextView
@@ -135,7 +144,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            tools:text="30 min" />
+                            tools:text="30 min"
+                            android:textColor="@color/country"/>
 
                     </LinearLayout>
 
@@ -154,7 +164,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Difficulty:" />
+                            android:text="Difficulty:"
+                            android:textColor="@color/title"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:id="@+id/difficultyTextView"
@@ -162,7 +174,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            tools:text="Easy" />
+                            tools:text="Easy"
+                            android:textColor="@color/country"/>
 
                     </LinearLayout>
 
@@ -178,7 +191,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     tools:text="Recipe for 4 servings"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/title"
+                    android:textStyle="bold"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -198,7 +213,8 @@
                         android:id="@+id/ingredientsTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:text="Pizza dough,\nTomato sauce,\nFresh mozzarella cheese,\nFresh basil leaves,\nOlive oil,\nSalt and pepper to taste" />
+                        tools:text="Pizza dough,\nTomato sauce,\nFresh mozzarella cheese,\nFresh basil leaves,\nOlive oil,\nSalt and pepper to taste"
+                        android:textColor="@color/ingredients"/>
 
                 </LinearLayout>
 
@@ -207,7 +223,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -221,7 +238,8 @@
                         android:id="@+id/instructionsTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:text="Pizza dough,\nTomato sauce,\nFresh mozzarella cheese,\nFresh basil leaves,\nOlive oil,\nSalt and pepper to taste" />
+                        tools:text="Pizza dough,\nTomato sauce,\nFresh mozzarella cheese,\nFresh basil leaves,\nOlive oil,\nSalt and pepper to taste"
+                        android:textColor="@color/ingredients" />
 
                 </LinearLayout>
 

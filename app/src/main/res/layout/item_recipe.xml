@@ -32,14 +32,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?attr/textAppearanceHeadline6"
-                android:text="Receta"/>
+                android:text="Receta"
+                android:textColor="@color/title"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/descriptionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?attr/textAppearanceBody1"
-                android:text="Pais"/>
+                android:text="Pais"
+                android:textColor="@color/country"
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,7 +64,9 @@
                         android:layoutDirection="rtl"
                         android:clickable="false"
                         app:chipIcon="@drawable/ic_rating_star"
-                        tools:text="4.5"/>
+                        tools:text="4.5"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/servingsTextView"
@@ -69,7 +75,9 @@
                         android:layoutDirection="rtl"
                         android:clickable="false"
                         app:chipIcon="@drawable/ic_person"
-                        tools:text="2"/>
+                        tools:text="2"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/timeTextView"
@@ -78,7 +86,9 @@
                         android:layoutDirection="rtl"
                         android:clickable="false"
                         app:chipIcon="@drawable/ic_time"
-                        tools:text="30 min"/>
+                        tools:text="30 min"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
 
                 </com.google.android.material.chip.ChipGroup>
 
@@ -88,7 +98,9 @@
                     android:layout_height="wrap_content"
                     app:chipBackgroundColor="@color/easy_color"
                     android:clickable="false"
-                    tools:text="Easy"/>
+                    tools:text="Easy"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
