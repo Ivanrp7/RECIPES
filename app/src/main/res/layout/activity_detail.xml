@@ -214,7 +214,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:text="Pizza dough,\nTomato sauce,\nFresh mozzarella cheese,\nFresh basil leaves,\nOlive oil,\nSalt and pepper to taste"
-                        android:textColor="@color/ingredients"/>
+                        android:textColor="@color/text"/>
 
                 </LinearLayout>
 
@@ -239,7 +239,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:text="Pizza dough,\nTomato sauce,\nFresh mozzarella cheese,\nFresh basil leaves,\nOlive oil,\nSalt and pepper to taste"
-                        android:textColor="@color/ingredients" />
+                        android:textColor="@color/text" />
 
                 </LinearLayout>
 

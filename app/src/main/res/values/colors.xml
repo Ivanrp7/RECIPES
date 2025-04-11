@@ -20,8 +20,12 @@
     <color name="hard_color">#80FF0D00</color>
     <color name="title">#FF3C00</color>
     <color name="country">#121FE0</color>
-    <color name="ingredients">#494848</color>
+    <color name="ingredients">#FFFF00</color>
     <color name="background">#9E9C9C</color>
+    <color name="text">#E100FF</color>
+
+
+
 
 
 
