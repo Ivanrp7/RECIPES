@@ -1,5 +1,6 @@
 package com.example.recipes.activities
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,6 +17,7 @@ import com.example.recipes.utils.SessionManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +26,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        cambiarIdioma(this, "es") // 👈 fuerza el español como idioma base
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -34,7 +40,18 @@ class MainActivity : AppCompatActivity() {
         } else {
             getAllRecipes()
         }
+
     }
+    private fun cambiarIdioma(context: Context, idioma: String) {
+        val locale = Locale(idioma)
+        Locale.setDefault(locale)
+
+        val config = context.resources.configuration
+        config.setLocale(locale)
+
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
+    }
+
 
     private fun getAllRecipes() {
         val service: RecipeServiceApi = RetrofitProvider.getRecipeServiceApi()
