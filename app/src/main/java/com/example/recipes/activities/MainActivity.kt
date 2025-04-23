@@ -27,9 +27,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        cambiarIdioma(this, "es") // 👈 fuerza el español como idioma base
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -42,16 +40,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    private fun cambiarIdioma(context: Context, idioma: String) {
-        val locale = Locale(idioma)
-        Locale.setDefault(locale)
-
-        val config = context.resources.configuration
-        config.setLocale(locale)
-
-        context.resources.updateConfiguration(config, context.resources.displayMetrics)
-    }
-
 
     private fun getAllRecipes() {
         val service: RecipeServiceApi = RetrofitProvider.getRecipeServiceApi()
