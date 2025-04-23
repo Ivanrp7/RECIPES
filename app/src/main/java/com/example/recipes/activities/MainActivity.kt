@@ -2,10 +2,12 @@ package com.example.recipes.activities
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import com.example.recipes.R
 import com.example.recipes.data.daos.RecipeDAO
@@ -26,7 +28,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main) // Asegúrate de que esta línea esté antes de `findViewById`
 
+        val btnCambiarIdioma = findViewById<Button>(R.id.btnCambiarIdioma)
+
+        btnCambiarIdioma.setOnClickListener {
+            cambiarIdioma(this, "es") // Llama a la función que cambia el idioma
+        }
 
 
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -40,6 +48,24 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
+    fun cambiarIdioma(context: Context, idioma: String) {
+        val locale = Locale(idioma)
+        Locale.setDefault(locale)
+
+        val config = Configuration()
+        config.setLocale(locale)
+
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
+
+        // Reiniciar actividad para aplicar los cambios
+        val intent = Intent(context, MainActivity::class.java)
+        context.startActivity(intent)
+    }
+
+
+
 
     private fun getAllRecipes() {
         val service: RecipeServiceApi = RetrofitProvider.getRecipeServiceApi()
