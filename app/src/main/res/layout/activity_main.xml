@@ -29,14 +29,6 @@
         <ProgressBar
             android:layout_width="64dp"
             android:layout_height="64dp"/>
-
-        <Button
-            android:id="@+id/btnCambiarIdioma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cambiar idioma" />
-
-
     </LinearLayout>
 
 </FrameLayout>

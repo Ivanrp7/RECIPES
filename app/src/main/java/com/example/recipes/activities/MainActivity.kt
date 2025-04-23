@@ -2,7 +2,6 @@ package com.example.recipes.activities
 
 import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,7 +18,6 @@ import com.example.recipes.utils.SessionManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,14 +26,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main) // Asegúrate de que esta línea esté antes de `findViewById`
-
-        val btnCambiarIdioma = findViewById<Button>(R.id.btnCambiarIdioma)
-
-        btnCambiarIdioma.setOnClickListener {
-            cambiarIdioma(this, "es") // Llama a la función que cambia el idioma
-        }
-
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -48,23 +38,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-
-    fun cambiarIdioma(context: Context, idioma: String) {
-        val locale = Locale(idioma)
-        Locale.setDefault(locale)
-
-        val config = Configuration()
-        config.setLocale(locale)
-
-        context.resources.updateConfiguration(config, context.resources.displayMetrics)
-
-        // Reiniciar actividad para aplicar los cambios
-        val intent = Intent(context, MainActivity::class.java)
-        context.startActivity(intent)
-    }
-
-
 
 
     private fun getAllRecipes() {

@@ -2,19 +2,12 @@ package com.example.recipes.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
-import android.view.View
-import com.example.recipes.R
 import com.example.recipes.data.daos.RecipeDAO
 import com.example.recipes.data.entities.Recipe
-import com.example.recipes.data.serviceapis.RecipeServiceApi
 import com.example.recipes.databinding.ActivityDetailBinding
-import com.example.recipes.utils.RetrofitProvider
 import com.squareup.picasso.Picasso
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+
 
 class DetailActivity : AppCompatActivity() {
 
@@ -48,7 +41,6 @@ class DetailActivity : AppCompatActivity() {
 
         recipe = recipeDAO.find(recipeId)
         loadData()
-        //findRecipeById(recipeId)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -87,27 +79,4 @@ class DetailActivity : AppCompatActivity() {
         }
         binding.instructionsTextView.text = instructionsText
     }
-
-    /*private fun findRecipeById(id: Int) {
-        //binding.content.progress.visibility = View.VISIBLE
-
-        val service: RecipeServiceApi = RetrofitProvider.getRecipeServiceApi()
-
-        CoroutineScope(Dispatchers.IO).launch {
-            // Llamada en segundo plano
-            val response = service.findById(id)
-
-            runOnUiThread {
-                // Modificar UI
-                //binding.content.progress.visibility = View.GONE
-                if (response.body() != null) {
-                    Log.i("HTTP", "respuesta correcta :)")
-                    recipe = response.body()!!
-                    loadData()
-                } else {
-                    Log.i("HTTP", "respuesta erronea :(")
-                }
-            }
-        }
-    }*/
 }
